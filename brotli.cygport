@@ -4,7 +4,7 @@ inherit cmake python-wheel
 
 NAME="brotli"
 VERSION=1.0.9
-RELEASE=1
+RELEASE=2
 CATEGORY="Libs"
 SUMMARY="Brotli compression format library"
 DESCRIPTION="Brotli is a generic-purpose lossless compression algorithm that
@@ -14,6 +14,7 @@ comparable to the best currently available general-purpose compression methods.
 It is similar in speed with deflate but offers more dense compression."
 HOMEPAGE="https://github.com/google/brotli"
 SRC_URI="${HOMEPAGE}/archive/v${VERSION}/brotli-v${VERSION}.tar.gz"
+PATCH_URI="${HOMEPAGE}/commit/092446fafb4bfb81738853b7c7f76b293cd92a80.patch"
 
 BUILD_REQUIRES="\
   cmake\
