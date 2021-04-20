@@ -1,0 +1,11 @@
+category: Archive
+build-depends: cygport   cmake  ninja  python36-devel python36-pip python36-wheel  python37-devel python37-pip python37-wheel  python38-devel python38-pip python38-wheel
+sdesc: "Brotli compression format library"
+ldesc: "Brotli is a generic-purpose lossless compression algorithm that
+compresses data using a combination of a modern variant of the LZ77 algorithm,
+Huffman coding and 2nd order context modeling, with a compression ratio
+comparable to the best currently available general-purpose compression methods.
+It is similar in speed with deflate but offers more dense compression."
+skip:
+
+homepage: https://github.com/google/brotli
