@@ -1,5 +1,5 @@
 CYGCMAKE_GENERATOR="Ninja"
-PYTHON_WHEEL_VERSIONS="2.7:3.6:3.7:3.8"
+PYTHON_WHEEL_VERSIONS="3.6:3.7:3.8"
 inherit cmake python-wheel
 
 NAME="brotli"
@@ -20,14 +20,13 @@ BUILD_REQUIRES="\
   cmake\
   ninja\
 \
-  python27-devel python27-pip python27-wheel\
   python36-devel python36-pip python36-wheel\
   python37-devel python37-pip python37-wheel\
   python38-devel python38-pip python38-wheel\
 "
 
 PKG_NAMES="brotli libbrotlicommon1 libbrotlidec1 libbrotlienc1 libbrotli-devel
-	   python27-brotli python36-brotli python37-brotli python38-brotli"
+	   python36-brotli python37-brotli python38-brotli"
 brotli_CATEGORY="Archive"
 brotli_CONTENTS="
 	usr/bin/brotli.exe
@@ -50,12 +49,6 @@ libbrotli_devel_CONTENTS="
 	usr/lib/pkgconfig/libbrotlicommon.pc
 	usr/lib/pkgconfig/libbrotlidec.pc
 	usr/lib/pkgconfig/libbrotlienc.pc
-"
-python27_brotli_CATEGORY="Python"
-python27_brotli_CONTENTS="
-	usr/lib/python2.7/site-packages/Brotli-${VERSION}.dist-info/
-	usr/lib/python2.7/site-packages/_brotli.dll
-	usr/lib/python2.7/site-packages/brotli.py*
 "
 python36_brotli_CATEGORY="Python"
 python36_brotli_CONTENTS="
