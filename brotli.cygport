@@ -19,7 +19,7 @@ LICENSE="MIT"
 #     https://spdx.org/licenses/MIT.html
 
 SRC_URI="${HOMEPAGE}/archive/v${VERSION}/brotli-v${VERSION}.tar.gz"
-PATCH_URI="${HOMEPAGE}/commit/092446fafb4bfb81738853b7c7f76b293cd92a80.patch"
+PATCH_URI="${HOMEPAGE}/commit/09b0992b6acb7faa6fd3b23f9bc036ea117230fc.patch"
 
 BUILD_REQUIRES="\
   cmake\
