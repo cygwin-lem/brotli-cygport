@@ -13,6 +13,11 @@ Huffman coding and 2nd order context modeling, with a compression ratio
 comparable to the best currently available general-purpose compression methods.
 It is similar in speed with deflate but offers more dense compression."
 HOMEPAGE="https://github.com/google/brotli"
+
+LICENSE="MIT"
+# cf. https://www.cygwin.com/packaging-hint-files.html#pvr-src.hint
+#     https://spdx.org/licenses/MIT.html
+
 SRC_URI="${HOMEPAGE}/archive/v${VERSION}/brotli-v${VERSION}.tar.gz"
 PATCH_URI="${HOMEPAGE}/commit/092446fafb4bfb81738853b7c7f76b293cd92a80.patch"
 
