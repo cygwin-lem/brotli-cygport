@@ -1,10 +1,10 @@
 CYGCMAKE_GENERATOR="Ninja"
-PYTHON_WHEEL_VERSIONS="3.6:3.7:3.8"
+PYTHON_WHEEL_VERSIONS="3.8:3.9"
 inherit cmake python-wheel
 
 NAME="brotli"
 VERSION=1.0.9
-RELEASE=2
+RELEASE=3
 CATEGORY="Libs"
 SUMMARY="Brotli compression format library"
 DESCRIPTION="Brotli is a generic-purpose lossless compression algorithm that
@@ -25,13 +25,12 @@ BUILD_REQUIRES="\
   cmake\
   ninja\
 \
-  python36-devel python36-pip python36-wheel\
-  python37-devel python37-pip python37-wheel\
   python38-devel python38-pip python38-wheel\
+  python39-devel python39-pip python39-wheel\
 "
 
 PKG_NAMES="brotli libbrotlicommon1 libbrotlidec1 libbrotlienc1 libbrotli-devel
-	   python36-brotli python37-brotli python38-brotli"
+	   python38-brotli python39-brotli"
 brotli_CATEGORY="Archive"
 brotli_CONTENTS="
 	usr/bin/brotli.exe
@@ -55,26 +54,19 @@ libbrotli_devel_CONTENTS="
 	usr/lib/pkgconfig/libbrotlidec.pc
 	usr/lib/pkgconfig/libbrotlienc.pc
 "
-python36_brotli_CATEGORY="Python"
-python36_brotli_CONTENTS="
-	usr/lib/python3.6/site-packages/Brotli-${VERSION}.dist-info/
-	usr/lib/python3.6/site-packages/_brotli.*.dll
-	usr/lib/python3.6/site-packages/brotli.py
-	usr/lib/python3.6/site-packages/__pycache__/brotli.*.pyc
-"
-python37_brotli_CATEGORY="Python"
-python37_brotli_CONTENTS="
-	usr/lib/python3.7/site-packages/Brotli-${VERSION}.dist-info/
-	usr/lib/python3.7/site-packages/_brotli.*.dll
-	usr/lib/python3.7/site-packages/brotli.py
-	usr/lib/python3.7/site-packages/__pycache__/brotli.*.pyc
-"
 python38_brotli_CATEGORY="Python"
 python38_brotli_CONTENTS="
 	usr/lib/python3.8/site-packages/Brotli-${VERSION}.dist-info/
 	usr/lib/python3.8/site-packages/_brotli.*.dll
 	usr/lib/python3.8/site-packages/brotli.py
 	usr/lib/python3.8/site-packages/__pycache__/brotli.*.pyc
+"
+python39_brotli_CATEGORY="Python"
+python39_brotli_CONTENTS="
+	usr/lib/python3.9/site-packages/Brotli-${VERSION}.dist-info/
+	usr/lib/python3.9/site-packages/_brotli.*.dll
+	usr/lib/python3.9/site-packages/brotli.py
+	usr/lib/python3.9/site-packages/__pycache__/brotli.*.pyc
 "
 
 src_compile() {
