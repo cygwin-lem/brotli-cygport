@@ -3,7 +3,7 @@ PYTHON_WHEEL_VERSIONS="3.8:3.9"
 inherit cmake python-wheel
 
 NAME="brotli"
-VERSION=1.1.0
+VERSION=1.2.0
 RELEASE=1
 CATEGORY="Libs"
 SUMMARY="Brotli compression format library"
@@ -34,6 +34,7 @@ brotli_CATEGORY="Archive"
 brotli_CONTENTS="
 	usr/bin/brotli.exe
 	usr/share/doc/${NAME}
+	usr/share/man/
 "
 libbrotlicommon1_CONTENTS="
 	usr/bin/cygbrotlicommon-1.dll
@@ -62,7 +63,7 @@ python38_brotli_CONTENTS="
 "
 python39_brotli_CATEGORY="Python"
 python39_brotli_CONTENTS="
-	usr/lib/python3.9/site-packages/Brotli-${VERSION}.dist-info/
+	usr/lib/python3.9/site-packages/brotli-${VERSION}.dist-info/
 	usr/lib/python3.9/site-packages/_brotli.*.dll
 	usr/lib/python3.9/site-packages/brotli.py
 	usr/lib/python3.9/site-packages/__pycache__/brotli.*.pyc
