@@ -1,10 +1,10 @@
 CYGCMAKE_GENERATOR="Ninja"
-PYTHON_WHEEL_VERSIONS="3.8:3.9"
+PYTHON_WHEEL_VERSIONS="3.8:3.9:3.12"
 inherit cmake python-wheel
 
 NAME="brotli"
 VERSION=1.2.0
-RELEASE=1
+RELEASE=2
 CATEGORY="Libs"
 SUMMARY="Brotli compression format library"
 DESCRIPTION="Brotli is a generic-purpose lossless compression algorithm that
@@ -26,10 +26,11 @@ BUILD_REQUIRES="\
 \
   python38-devel python38-pip python38-wheel\
   python39-devel python39-pip python39-wheel\
+  python312-devel python312-pip python312-wheel\
 "
 
 PKG_NAMES="brotli libbrotlicommon1 libbrotlidec1 libbrotlienc1 libbrotli-devel
-	   python38-brotli python39-brotli"
+	   python38-brotli python39-brotli python312-brotli"
 brotli_CATEGORY="Archive"
 brotli_CONTENTS="
 	usr/bin/brotli.exe
@@ -67,6 +68,13 @@ python39_brotli_CONTENTS="
 	usr/lib/python3.9/site-packages/_brotli.*.dll
 	usr/lib/python3.9/site-packages/brotli.py
 	usr/lib/python3.9/site-packages/__pycache__/brotli.*.pyc
+"
+python312_brotli_CATEGORY="Python"
+python312_brotli_CONTENTS="
+	usr/lib/python3.12/site-packages/brotli-${VERSION}.dist-info/
+	usr/lib/python3.12/site-packages/_brotli.*.dll
+	usr/lib/python3.12/site-packages/brotli.py
+	usr/lib/python3.12/site-packages/__pycache__/brotli.*.pyc
 "
 
 src_compile() {
