@@ -3,8 +3,8 @@ PYTHON_WHEEL_VERSIONS="3.8:3.9:3.12"
 inherit cmake python-wheel
 
 NAME="brotli"
-VERSION=1.2.0
-RELEASE=2
+VERSION=1.2.1
+RELEASE=1
 CATEGORY="Libs"
 SUMMARY="Brotli compression format library"
 DESCRIPTION="Brotli is a generic-purpose lossless compression algorithm that
